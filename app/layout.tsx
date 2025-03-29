@@ -1,6 +1,7 @@
 import { Toaster } from "sonner";
 import type { Metadata } from "next";
 import { Mona_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react"
 
 import "./globals.css";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={`${monaSans.className} antialiased pattern`}>
         {children}
+        <Analytics/>
 
         <Toaster />
       </body>
