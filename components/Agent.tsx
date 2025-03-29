@@ -62,7 +62,8 @@ const Agent = ({
     };
 
     const onError = (error: Error) => {
-      console.log("Error:", error);
+      console.error("Error occurred:", error);
+      alert(`An error occurred: ${error.message}`);
     };
 
     vapi.on("call-start", onCallStart);
